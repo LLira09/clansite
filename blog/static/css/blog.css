@@ -35,7 +35,10 @@ Colors
   color: #000;
 }
 
-/* h1, h2, h3, h4 {
-  font-family: 'Tangerine', 'Inconsolata', 'Droid Sans', serif;
+.post-form-blog textarea {
+  width: 100%;
+}
 
-} */
+.post-form-blog .btn-primary {
+  float: right;
+}
