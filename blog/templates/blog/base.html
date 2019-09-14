@@ -13,6 +13,9 @@
   </head>
   <body>
     <div class="page-header">
+      {% if user.is_authenticated %}
+        <a href="{% url 'post_new' %}" class="top-menu"><i class="fas fa-plus fa-2x"></i></a>
+      {% endif %}
       <h1><a href="{% url 'post_list' %}">Destiny 2 Shadowkeep News</a></h1>
     </div>
     <div class="content container">
