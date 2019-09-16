@@ -21,12 +21,13 @@
       <p>{{ post.text | linebreaksbr }}</p>
   </div>
   <hr>
-  <a href="{% url 'add_comment_to_post' pk=post.pk %}" class="btn btn-secondary">Add Comment</a>
+  <a href="{% url 'add_comment_to_post' pk=post.pk %}" class="btn btn-secondary" >Add Comment</a>
   {% for comment in post.comments.all %}
     <div class="comment">
       <div class="date">
         {{ comment.created_date }}
       </div>
+      <a href="{% url 'comment_remove' pk=comment.pk %}"><i class="fas fa-trash"></i></a>
       <strong>{{ comment.author }}</strong>
       <p>{{ comment.text }}</p>
     </div>
